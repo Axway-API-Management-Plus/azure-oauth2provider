@@ -12,7 +12,7 @@ The Azure OAuth2Provider will add the required `Origin` header in the Token-Exch
 
 ![Dummy Origin header](https://github.com/Axway-API-Management-Plus/azure-oauth2provider/blob/main/lib/images/token_exchange_request_headers.png)
 
-# Installation & Setup
+## Installation & Setup
 
 - Download the release package
 - Copy the JAR-File into your API-Gateway(s) `ext/lib` folder and __restart the API-Gateway(s)__
