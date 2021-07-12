@@ -34,4 +34,4 @@ copyDeps() {
 }
 
 
-copyDeps "${gatewayInstallationFolder}/system/lib/vordel-core-circuit-7.7.0.20210330-6.jar" com.vordel vordel-core-circuit ${gatewayVersion}
+copyDeps "${gatewayInstallationFolder}/system/lib/vordel-core-circuit-7.7.0*.jar" com.vordel vordel-core-circuit ${gatewayVersion}
