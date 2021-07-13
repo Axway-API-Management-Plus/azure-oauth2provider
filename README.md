@@ -3,9 +3,9 @@
 If you use the API gateway as an OAuth2 client with Azure, it may be necessary to register a special OAuth2 provider. 
 Especially if you use the PKCE flow. The reason is that during the token exchange request Azure requires an Origin header and acknowledges this with the following error message:  
    
-`
-"error":"invalid_request","error_description":"AADSTS9002327: Tokens issued for the 'Single-Page Application' client-type may only be redeemed via cross-origin requests.\r\nTrace ID: 0e8f9824-95f5-481a-8deb-b035b1dd8303\r\nCorrelation ID: 2e1e8f7d-a08a-420e-8908-074c2a9add4d\r\nTimestamp: 2021-07-12 13:45:27Z","error_codes":[9002327],"timestamp":"2021-07-12 13:45:27Z","trace_id":"0e8f9824-95f5-481a-8deb-b035b1dd8303","correlation_id":"2e1e8f7d-a08a-420e-8908-074c2a9add4d"}
-`  
+```json
+{"error":"invalid_request","error_description":"AADSTS9002327: Tokens issued for the 'Single-Page Application' client-type may only be redeemed via cross-origin requests.\r\nTrace ID: 0e8f9824-95f5-481a-8deb-b035b1dd8303\r\nCorrelation ID: 2e1e8f7d-a08a-420e-8908-074c2a9add4d\r\nTimestamp: 2021-07-12 13:45:27Z","error_codes":[9002327],"timestamp":"2021-07-12 13:45:27Z","trace_id":"0e8f9824-95f5-481a-8deb-b035b1dd8303","correlation_id":"2e1e8f7d-a08a-420e-8908-074c2a9add4d"}
+```  
 
 
 The Azure OAuth2Provider will add the required `Origin` header in the Token-Exchange request.
